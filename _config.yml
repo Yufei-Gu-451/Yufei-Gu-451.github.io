@@ -8,6 +8,7 @@ header_pages:
   - index.md
   - publications.md
   - cv.md
+  - contact.md
 
 # Build settings
 markdown: kramdown
