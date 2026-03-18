@@ -1,0 +1,27 @@
+title: "Researcher Personal Website"
+author: "Your Name"
+email: "your.email@example.com"
+description: "Personal website for a researcher showcasing research interests, publications, and CV."
+url: "https://yourusername.github.io"
+baseurl: ""
+header_pages:
+  - index.md
+  - publications.md
+  - cv.md
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Include files
+include:
+  - _pages
