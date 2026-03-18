@@ -3,62 +3,34 @@ layout: default
 title: CV
 ---
 
-<div class="page-intro">
-  <p class="eyebrow">Curriculum Vitae</p>
-  <h1>Education and Employment</h1>
-  <p>A concise overview of academic appointments, education, research experience, and service.</p>
-</div>
+## Contact
 
-This page provides a concise overview of education, employment, and academic background.
-
-## Employment
-
-- **Current Position**, Institution Name, Location, `2025–present`
-  - Brief description of your role, research area, and major responsibilities.
-
-- **Previous Position**, Institution Name, Location, `2023–2025`
-  - Short summary of research, teaching, or industry experience.
-
-- **Earlier Position**, Institution Name, Location, `2021–2023`
-  - Optional note on projects, mentoring, or collaborations.
+- **Email:** [ygu167@connect.hkust-gz.edu.cn](mailto:ygu167@connect.hkust-gz.edu.cn)
+- **Phone (UK):** +44 07529968601 · **Phone (China):** +86 13122366091
+- **GitHub:** [Yufei-Gu-451](https://github.com/Yufei-Gu-451)
+- **Google Scholar:** [Yufei Gu](https://scholar.google.com/citations?user=Yufei+Gu)
 
 ## Education
 
-- **Ph.D. in [Field]**, Institution Name, Year
-  - Dissertation: “Title of Dissertation”
-  - Advisor: Prof. [Name]
+- **Ph.D. in Data Science and Analytics**, The Hong Kong University of Science and Technology (Guangzhou) [HKUST(GZ)] · *Sept 2025 – June 2029* (in progress)
+- **MEng in Computer Science**, University College London (UCL) · *Sept 2020 – June 2024* · First Class Honours (71/100)
+- **AS & A-Levels (4 A*)**, A Cambridge College, Shanghai · *Sept 2018 – June 2020*
 
-- **M.S. in [Field]**, Institution Name, Year
-  - Thesis: “Title of Thesis”
+## Research & Industry Experience
 
-- **B.S. in [Field]**, Institution Name, Year
+- **Research Assistant (full-time)**, HKUST(GZ) · *Sept 2024 – Aug 2025* – Improving efficiency for LLM pretraining and optimizer design.
+- **Research Assistant (full-time)**, University College London Hospital (UCLH) · *June 2024 – Aug 2024* – Data collection and survival analysis for SBRT treatments.
+- **Research Assistant (remote)**, Fudan University NLP Group · *June 2023 – June 2024* – Developed biologically plausible learning algorithms for ANNs/SNNs in collaboration with Fudan.
 
-## Research and Teaching Experience
+## Publications & Projects Highlights
 
-- **Research Assistant**, Lab or Center Name, `Year–Year`
-- **Teaching Assistant**, Course Name, `Year–Year`
-- **Guest Lecturer / Mentor**, Program or Institution, `Year–Year`
+- **[ICLR 2026]** *Late-to-Early Training: LET LLMs Learn Earlier, So Faster and Better* – Second author, HKUST-GZ. Proposed guiding early layers with late-trained counterparts to accelerate convergence.
+- **[ICML 2025]** *Investigating the Overlooked Hessian Structure: From CNNs to LLMs* – Co-first author, HKUST-GZ. Identified Hessian power laws that forecast generalization performance.
+- **[ICLR 2024]** *Unraveling the Enigma of Double Descent* – First author, UCL × Fudan. Statistically linked interpolation strategies to generalization via feature space analysis.
+- **[Neural Networks]** *SpikeCLIP: A contrastive language-image pre-trained spiking neural network* – Fourth author, Fudan. Proposed a two-step training algorithm aligning multimodal features through spikes.
 
-## Honors and Awards
+### Projects
 
-- **Award Name**, Year
-- **Fellowship / Scholarship Name**, Year
-- **Travel Grant / Best Paper Award**, Year
-
-## Service
-
-- Reviewer for **[journal or conference]**
-- Organizer of **[workshop, reading group, seminar]**
-- Member of **[professional society or committee]**
-
-## Skills
-
-- **Methods**: List research methods, experimental techniques, or theoretical tools.
-- **Programming**: Python, R, MATLAB, Julia, C++, or other tools.
-- **Languages**: English, Mandarin, or other spoken languages.
-
-## Contact
-
-- **Email**: your.email@example.com
-- **Office / Lab**: Building, Room, Institution
-- **Profiles**: [Google Scholar](https://scholar.google.com), [ORCID](https://orcid.org), [GitHub](https://github.com)
+- **Mano: Restriking Manifold Optimization for LLM Training** (personal, HKUST-GZ, *2025.12 – present*) – Developed the Mano optimizer inspired by manifold-based techniques to improve LLM pretraining efficiency beyond AdamW and Muon.
+- **Principal Spectral Regularization for LLM Pretraining** (joint HKUST-GZ × CCF-Baidu Fund, *2024.10 – 2025.10*) – Introduced a spectral regularization method penalizing dominant gradient components to study partial orthogonalization in pretraining.
+- **Biomedical Question-Answering System (LLM + RAG)** (group project, UCL, *2024.1 – 2024.4*) – Built a biomedical QA system over PubMed using retrieval-augmented generation.

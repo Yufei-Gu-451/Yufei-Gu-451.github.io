@@ -1,8 +1,8 @@
-title: "Researcher Personal Website"
-author: "Your Name"
-email: "your.email@example.com"
-description: "Personal website for a researcher showcasing research interests, publications, and CV."
-url: "https://yourusername.github.io"
+title: "Yufei Gu's personal website"
+author: "Yufei Gu"
+email: "yufei.gu.451@outlook.com"
+description: "PhD student in learning theory and optimization building efficient optimizers and generalization tools for deep learning and LLMs."
+url: "https://yufei-gu-451.github.io"
 baseurl: ""
 header_pages:
   - index.md
