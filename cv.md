@@ -7,21 +7,74 @@ title: CV
 ## Education
 <hr class="section-divider" />
 
-- **Ph.D. in Data Science and Analytics**, The Hong Kong University of Science and Technology (Guangzhou) · *Sept 2025 – June 2029* · (in progress)
-- **M.Eng. in Computer Science**, University College London (UCL) · *Sept 2020 – June 2024* · First Class Honours (71/100)
-- **AS & A-Levels**, Acabridge College, Shanghai · *Sept 2018 – June 2020*  · 4A*
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Ph.D. in Data Science and Analytics</strong>, The Hong Kong University of Science and Technology (Guangzhou)</div>
+        <div class="cv-entry-date">Sept 2025 – June 2029</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Supervisor: Dr. Zeke Xie</li>
+    </ul>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>M.Eng. in Computer Science</strong>, University College London (UCL), First Class Honours</div>
+        <div class="cv-entry-date">Sept 2020 – June 2024</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Supervisor: Prof. Tomaso Aste</li>
+    </ul>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>British AS & A-Levels</strong>, Acabridge College, Shanghai</div>
+        <div class="cv-entry-date">Sept 2018 – June 2020</div>
+    </div>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Primary & Middle School</strong>, Shanghai Experimental School (SES)</div>
+        <div class="cv-entry-date">Sept 2010 – June 2018</div>
+    </div>
+</div>
 </section>
 
 <section class="cv-block" markdown="1">
 ## Internships
 <hr class="section-divider" />
 
-- **Research Assistant (full-time)**, HKUST(GZ) · *Sept 2024 – Aug 2025*
-	- Improving efficiency for LLM pretraining and optimizer design.
-- **Research Assistant (full-time)**, University College London Hospital (UCLH) · *June 2024 – Aug 2024*
-	- Data collection and survival analysis for SBRT treatments.
-- **Research Assistant (remote)**, Fudan University (NLP Group) · *June 2023 – June 2024*
-	- Studying biologically plausible learning algorithms alternative to back-propagation for ANNs/SNNs.
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Research Assistant (full-time)</strong>, HKUST(GZ)</div>
+        <div class="cv-entry-date">Sept 2024 – Aug 2025</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Investigating efficient pre- and post-training techniques for Large Language Models (LLMs).</li>
+    </ul>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Research Assistant (full-time)</strong>, University College London Hospital (UCLH)</div>
+        <div class="cv-entry-date">June 2024 – Aug 2024</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Elucidating the Prognostic Value of Clinical and Tumor Factors in Metastases Treated with Stereotactic Body Radiotherapy (SBRT).</li>
+    </ul>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Research Assistant (remote)</strong>, Fudan University (NLP Group)</div>
+        <div class="cv-entry-date">June 2023 – June 2024</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Evaluating biologically plausible learning algorithms alternative to back-propagation for Artificial and Spiking Neural Networks (SNNs).</li>
+    </ul>
+</div>
 </section>
 
 <section class="cv-block" markdown="1">

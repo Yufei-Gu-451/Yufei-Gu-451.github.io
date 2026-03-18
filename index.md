@@ -39,6 +39,7 @@ title: Home
           <li><strong>2026-03</strong><span>Release of Mano_v2 at <a href="https://github.com/xie-lab-ml/Mano-Restriking-Manifold-Optimization-for-LLM-Training">GitHub:Mano-Restriking-Manifold-Optimization-for-LLM-Training</a>!</span></li>
           <li><strong>2026-02</strong><span>Release of the Mano optimizer and manuscript preprint at <a href="https://arxiv.org/abs/2601.23000">arXiv:2601.23000</a>!</span></li>
           <li><strong>2026-01</strong><span>Two accepted papers at [ICLR'26] and [CVPR'26]!</span></li>
+          <li><strong>2025-09</strong><span>Starting PhD at HKUST-GZ, XLeaf Lab!</span></li>
         </ul>
       </section>
     </div>
@@ -55,6 +56,17 @@ title: Home
         </ol>
         <p><a href="./publications">See the full publication list →</a></p>
       </section>
+    </div>
+  </section>
+
+  <section class="logo-showcase panel" aria-label="Affiliation logos">
+    <div class="logo-grid">
+      <a class="logo-card" href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noreferrer">
+        <img src="./logos/hkustgz_logo_long.png" alt="The Hong Kong University of Science and Technology (Guangzhou)" />
+      </a>
+      <a class="logo-card" href="https://xie-lab-ml.github.io/" target="_blank" rel="noreferrer">
+        <img src="./logos/xleaf_lab_logo_long.png" alt="XLeaf Lab" />
+      </a>
     </div>
   </section>
 </div>
