@@ -55,6 +55,20 @@ a {
   color: var(--color-primary-deep);
 }
 
+.site-title,
+.site-footer,
+.footer-heading,
+.footer-col,
+.contact-list,
+.social-media-list {
+  font-family: "Yu Gothic UI";
+}
+
+.site-title,
+.footer-heading {
+  letter-spacing: -0.01em;
+}
+
 .site-title:hover,
 .page-link:hover,
 a:hover {
@@ -99,6 +113,12 @@ a:hover {
   font-size: clamp(2.5rem, 4vw, 4.25rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
+}
+
+.chinese-name {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .hero-divider {
@@ -322,11 +342,12 @@ h3 {
 
 .bibliography-list {
   margin: 18px 0 0;
+  padding-left: 1.6rem;
 }
 
 .bibliography-list li {
   margin-bottom: 14px;
-  padding-left: 6px;
+  padding-left: 0.35rem;
 }
 
 .page-intro {

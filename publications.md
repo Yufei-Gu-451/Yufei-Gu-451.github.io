@@ -6,7 +6,7 @@ title: Publications
 <div class="page-intro">
 	<p class="eyebrow">Research Output</p>
 	<h1>Publications</h1>
-	<p> † Co-first authors. </p>
+	<p> Foundational, Practical, Divergent. † Co-first authors. </p>
 	<hr class="section-divider" />
 </div>
 
@@ -18,7 +18,7 @@ title: Publications
 
 2. **Tang Qian-Yuan†, Yufei Gu†**, Cai Yunfeng, Sun Mingming, Li Ping, Xie Zeke, et al. *Investigating the Overlooked Hessian Structure: From CNNs to LLMs.* In *Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)*. [\<poster\>](https://icml.cc/virtual/2025/poster/44080)
 
-3. **Yufei Gu**, X Zheng, Tomaso Aste. *Unraveling the Enigma of Double Descent: an in-depth Analysis Through the Lens of Learned Feature Space.* In *Proceedings of the 12th International Conference on Learning Representations (ICLR 2024)*. [\<poster\>](https://iclr.cc/virtual/2024/poster/19184)
+3. **Yufei Gu**, Xiaoqing Zheng, Tomaso Aste. *Unraveling the Enigma of Double Descent: an in-depth Analysis Through the Lens of Learned Feature Space.* In *Proceedings of the 12th International Conference on Learning Representations (ICLR 2024)*. [\<poster\>](https://iclr.cc/virtual/2024/poster/19184)
 
 4. Zhao Ji, **Yufei Gu**, Shao Shitong, Zhou Xun, Xiang Liang, Xie Zeke. *Late-to-Early Training: LET LLMs Learn Earlier, So Faster and Better.* In *Proceedings of the 14th International Conference on Learning Representations (ICLR 2026)*. [\<poster\>](https://arxiv.org/abs/2602.05393)
 
