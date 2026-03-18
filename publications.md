@@ -9,32 +9,20 @@ title: Publications
 	<p>Use this page for a complete publication list, grouped by type, year, or research theme.</p>
 </div>
 
-Use this page for your complete publication list. You can organize entries by type, year, or topic.
+Updated list ordered roughly by type and year to match the BibTeX entries below.
 
 ## Journal Articles
 
-1. **Your Name**, Co-author Name. “Title of the Article.” *Journal Name*, Volume(Issue): pages, 2026. [DOI](https://doi.org/example)
-2. **Your Name**, Co-author Name. “Title of Another Article.” *Journal Name*, Volume(Issue): pages, 2025. [Link](https://example.com)
+1. **Lv, Changze**, Li, Tianlong, Liu, Wenhao, **Gu, Yufei**, Xu, Jianhan, Zhang, Cenyuan, Wu, Muling, Zheng, Xiaoqing, Huang, Xuanjing. *SpikeCLIP: A contrastive language--image pretrained spiking neural network.* *Neural Networks* 188:107475, 2025.
 
 ## Conference Papers
 
-1. **Your Name**, Co-author Name. “Conference Paper Title.” In *Proceedings of Conference Name*, pages, 2025. [Link](https://example.com)
-2. **Your Name**, Co-author Name. “Another Conference Paper.” In *Proceedings of Conference Name*, pages, 2024. [Link](https://example.com)
+1. **Gu, Yufei**, Zheng, X., Aste, T. *Unraveling the Enigma of Double Descent: an in-depth Analysis Through the Lens of Learned Feature Space.* In *Proceedings of the 12th International Conference on Learning Representations (ICLR 2024)*.
+2. Tang, Qian-Yuan, **Gu, Yufei**, Cai, Yunfeng, Sun, Mingming, Li, Ping, Xie, Zeke, et al. *Investigating the Overlooked Hessian Structure: From CNNs to LLMs.* In *Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)*.
+3. Zhao, Ji, **Gu, Yufei**, Shao, Shitong, Zhou, Xun, Xiang, Liang, Xie, Zeke. *Late-to-Early Training: LET LLMs Learn Earlier, So Faster and Better.* In *Proceedings of the 14th International Conference on Learning Representations (ICLR 2026)*.
+4. Shao, Shitong, **Gu, Yufei**, Xie, Zeke. *FastLightGen: Fast and Light Video Generation with Fewer Steps and Parameters.* In *Proceedings of CVPR (The IEEE/CVF Conference on Computer Vision and Pattern Recognition)*, 2026.
 
-## Preprints
+## Preprints and Reports
 
-1. **Your Name**, Co-author Name. “Preprint Title.” *arXiv*, 2026. [arXiv](https://arxiv.org/abs/xxxx.xxxxx)
-
-## Book Chapters and Other Writing
-
-1. **Your Name**. “Chapter or Report Title.” In *Book or Report Title*, Publisher, 2024.
-
-## Thesis
-
-1. **Your Name**. “Dissertation or Thesis Title.” Degree thesis, Institution Name, Year.
-
-## Notes
-
-- Add links to PDFs, code, datasets, or slides when available.
-- If you prefer, group publications by year instead of type.
-- You can bold your name in author lists to improve readability.
+1. **Lv, Changze**, Changze, Gu, Guo, Zhengkang, Xu, Zhibo, Wu, Yixin, Zhang, Feiran, Shi, Tianyuan, Wang, Zhenghua, Yin, Ruicheng, Shang, Yu, et al. *Towards biologically plausible computing: A comprehensive comparison.* arXiv:2406.16062, 2024.
+2. **Gu, Yufei**, Xie, Zeke. *Mano: Restriking Manifold Optimization for LLM Training.* arXiv:2601.23000, 2026.

@@ -5,22 +5,22 @@ title: CV
 
 ## Contact
 
-- **Email:** [ygu167@connect.hkust-gz.edu.cn](mailto:ygu167@connect.hkust-gz.edu.cn)
-- **Phone (UK):** +44 07529968601 · **Phone (China):** +86 13122366091
+- **Email:** [ygu167@connect.hkust-gz.edu.cn](mailto:ygu167@connect.hkust-gz.edu.cn) / [yufei.gu.451@outlook.com](mailto:yufei.gu.451@outlook.com)
+- **Phone (China):** +86 13122366091
 - **GitHub:** [Yufei-Gu-451](https://github.com/Yufei-Gu-451)
-- **Google Scholar:** [Yufei Gu](https://scholar.google.com/citations?user=Yufei+Gu)
+- **Google Scholar:** [Yufei Gu](https://scholar.google.co.uk/citations?user=YIhJgKsAAAAJ&hl=en)
 
 ## Education
 
-- **Ph.D. in Data Science and Analytics**, The Hong Kong University of Science and Technology (Guangzhou) [HKUST(GZ)] · *Sept 2025 – June 2029* (in progress)
-- **MEng in Computer Science**, University College London (UCL) · *Sept 2020 – June 2024* · First Class Honours (71/100)
-- **AS & A-Levels (4 A*)**, A Cambridge College, Shanghai · *Sept 2018 – June 2020*
+- **Ph.D. in Data Science and Analytics**, The Hong Kong University of Science and Technology (Guangzhou) · *Sept 2025 – June 2029* · (in progress)
+- **M.Eng. in Computer Science**, University College London (UCL) · *Sept 2020 – June 2024* · First Class Honours (71/100)
+- **AS & A-Levels**, A Cambridge College, Shanghai · *Sept 2018 – June 2020*  · A*A*A*A*
 
-## Research & Industry Experience
+## Internships
 
 - **Research Assistant (full-time)**, HKUST(GZ) · *Sept 2024 – Aug 2025* – Improving efficiency for LLM pretraining and optimizer design.
 - **Research Assistant (full-time)**, University College London Hospital (UCLH) · *June 2024 – Aug 2024* – Data collection and survival analysis for SBRT treatments.
-- **Research Assistant (remote)**, Fudan University NLP Group · *June 2023 – June 2024* – Developed biologically plausible learning algorithms for ANNs/SNNs in collaboration with Fudan.
+- **Research Assistant (remote)**, Fudan University (NLP Group) · *June 2023 – June 2024* – Studying biologically plausible learning algorithms alternative to back-propagation for ANNs/SNNs.
 
 ## Publications & Projects Highlights
 
