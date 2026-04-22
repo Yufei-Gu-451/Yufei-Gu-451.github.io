@@ -6,7 +6,7 @@ title: Publications
 <div class="page-intro">
 	<p class="eyebrow">Research Output</p>
 	<h1>Publications</h1>
-	<p> Foundational, Practical, Divergent. † Co-first authors. </p>
+	<p> Fundamental Questions, Diverse Methodologies, and Practical Impact. † Co-first authors. </p>
 	<hr class="section-divider" />
 </div>
 

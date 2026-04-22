@@ -14,8 +14,9 @@ title: Home
 
       <div class="hero-actions">
         <a class="button-primary" href="./publications">Publications</a>
-        <a class="button-secondary" href="./cv">Curriculum Vitae</a>
-        <a class="button-tertiary" href="./contact">Contact</a>
+        <a class="button-accent" href="./notes">Notes</a>
+        <a class="button-soft" href="./cv">Curriculum Vitae</a>
+        <a class="button-accent" href="./contact">Contact</a>
       </div>
     </div>
 
@@ -32,7 +33,6 @@ title: Home
   <section class="content-grid">
     <div class="content-main">
       <section id="news" class="panel accent-panel">
-        <p class="section-label">News</p>
         <h2>Recent Updates</h2>
         <hr class="hero-divider" />
         <ul class="news-list">
@@ -46,7 +46,6 @@ title: Home
 
     <div class="content-side">
       <section id="selected-bibliography" class="panel">
-        <p class="section-label">Selected Bibliography</p>
         <h2>Highlighted Work</h2>
         <hr class="hero-divider" />
         <ol class="bibliography-list">

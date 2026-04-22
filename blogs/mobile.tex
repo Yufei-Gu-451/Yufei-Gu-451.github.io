@@ -1,0 +1,557 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt, aspectratio=169]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+\useoutertheme{infolines}  %[subsection=false]{}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
+\setbeamersize{text margin left=1.2cm, text margin right=1.2cm}
+}
+
+
+\usepackage[numbers,sort&compress]{natbib} % or use [authoryear]
+%\usepackage[backend=biber]{biblatex}
+%\addbibresource{refs.bib}
+
+\usepackage{geometry}
+\geometry{a5paper, top=0cm, bottom=1cm}
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule,\midrule and \bottomrule in tables
+\usepackage{bbm} %mathbbm
+\usepackage{xcolor}
+\usepackage{subfigure}
+\usepackage[ruled]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{bbding}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{media9}
+\usepackage{multimedia}
+\usepackage{color}
+
+\RequirePackage[fixed]{fontawesome5}
+
+\DeclareMathOperator*{\minimize}{min}
+\DeclareMathOperator*{\maximize}{max}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\KL}{KL}
+\DeclareMathOperator*{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Sup}{Sup}
+\DeclareMathOperator{\Gen}{Gen}
+\DeclareMathOperator{\Activation}{Activ}
+\DeclareMathOperator{\MSE}{MSE}
+\DeclareMathOperator{\PSNR}{PSNR}
+\DeclareMathOperator{\SSIM}{SSIM}
+\DeclareMathOperator{\SSSIM}{S3IM}
+\DeclareMathOperator{\Patch}{\mathcal{P}}
+\DeclareMathOperator{\std}{std}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[XLeaf Lab]{Latent Reasoning \& Iterative Refinement \\ in Large Language Models} % The short title appears at the bottom of every slide, the full title is only on the title page
+\Large
+\author{Yufei Gu}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage % Print the title page as the first slide
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\textwidth]{logos/hkustgz_logo.png} 
+        %\includegraphics[width=0.6\textwidth]{Figures/riken_aip_logo.jpeg}
+        \hspace{2 cm}
+        \includegraphics[width=0.4\textwidth]{logos/xleaf_lab_logo_long.png}
+    \end{figure}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{frame}{Before we start: What's wrong with CoT reasoning?}
+\large 
+
+\textbf{Chain-of-Thought (CoT):} A model generates a sequence of intermediate reasoning steps (in tokens) that connect the input to the final answer. However, CoT has limitations in:
+\begin{itemize}
+    %\setlength{\itemsep}{0.5cm}
+    \item Faithfulness issues: Models don't always say what they think in reasoning chains \citep{turpin2023language}.
+    \item Scalability limits: Long token chains introduce latency, computational overhead, and diminishing returns \citep{wu2025more}.
+    \item Reversal curse: Forward-only causal generation limited by the next-token prediction paradigm, and cannot refine previously generated tokens \citep{berglund2023reversal}.
+\end{itemize}
+
+\vspace{1cm}
+\noindent\rule{\linewidth}{0.2mm}
+\vspace{1cm}
+
+\textbf{In this paper trip, we will briefly visit:}
+\begin{enumerate}
+    \item Allocation strategies of compute budget from skipping layers/tokens to refine tokens/features iteratively.
+    \item Using hidden states as inputs and scaling up the reasoning depth in the latent space.
+    \item Improving stability with feature-token interpolation.
+    \item The diffusion paradigm in language modelling and how advanced unmasking/remasking strategies are designed.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of Contents}
+    \Large \tableofcontents
+\end{frame}
+
+%\begin{frame}{}
+    %\Large \tableofcontents[currentsection]
+%\end{frame}
+
+%------------------------------------------------
+\section{Scable Reasoning Depth in LLMs:\\ From Layer Skipping to Token Refinement}
+
+\begin{frame}{1. Scable Reasoning Depth in LLMs: \hspace{5cm} From Layer Skipping to Token Refinement}
+    \textit{In the human thinking process, simple questions can be answered quickly and complex questions require more time for reasoning.}
+    \begin{itemize}
+        \item \textbf{Can LLMs use less parameters on some inputs?}
+        \item There exists dozens of studies on Dynamic Depth (e.g., Early Exit, Skip Layer) and Dynamic Width (e.g., Pruning CNN channels or Attention Heads, MoE). Let's review one of them:
+    \end{itemize}
+    \noindent\rule{\linewidth}{0.2mm}
+
+    \textbf{Not All Layers of LLMs are Necessary during Inference [2024.3]}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.47\linewidth]{images/not-all-layers-adainfer.png}
+        \includegraphics[width=0.47\linewidth]{images/not-all-layers.png}
+        \caption{AdaInfer processes input with inference stopping at different decoding layers \citep{fan2024not}. The \textit{solid line} represents accuracies on sentiment analysis and \textit{dashed line} on MMLU with the LLaMA-2-7B model.}
+    \end{figure}
+    \vspace{-0.3cm}
+    \begin{itemize}
+        \item AdaInfer compromises a binary Classifier that predicts whether to stop the inference at each decoding layer.
+        \item Feature selection is performed on hidden states:
+        \begin{itemize}
+            \item Confidence Gap: P(top token) - P(second token).
+            \item Top Probability: P(top token).
+            \item Cosine Similarities: between current and previous block's attn/mlp/block outputs.
+        \end{itemize}
+        \item AdaInfer exhibits an average $17.8\%$ pruning ratio during inference with $<1\%$ degradation on performance.
+        \item Feature analysis suggests that Gap and Top Prob can serve as universal features for the inference-stopping signal.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Mixture-of-Depths: Dynamically Allocating Compute \hspace{1cm} [arXiv 2024.4]}
+    \textit{How can we dynamically allocate the compute budget at token-level?}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/mixture-of-depth.png}
+        \caption{Mixture-of-Depths (MoD) Transformer. A block-wise router chooses tokens between a standard block's computation or a residual connection \citep{raposo2024mixture}.}
+    \end{figure}
+
+    \textbf{The Mixture-of-Depths Strategy:}
+    \begin{itemize}
+        \item Limit the number of tokens in a sequence that can participate in a block’s computation.
+        \item Use a per-block router to emit a scalar weight for each token; Identify the top-k weights to select tokens.
+        \item Since some tokens are routed around the block, the total FLOP footprint is reduced compared to vanilla/MOE transformers.
+        \item A 220M MoD model slightly outperforms the isoFLOP optimal 220M baseline but steps 66\% faster \citep{raposo2024mixture}.
+        \item Expert or Top-k token routing schemes chooses over- or under-process some tokens or load-imbalance.
+    \end{itemize}
+
+    %\begin{figure}
+        %\centering
+        %\includegraphics[width=0.9\linewidth]{images/mixture-of-depth-scaling-law.png}
+        %\caption{The scaling law of MoD transformers. A 220M MoD slightly outperforms the optimal 220M baseline but steps 66\% fatser \citep{raposo2024mixture}.}
+    %\end{figure}
+\end{frame}
+
+\begin{frame}{Mixture-of-Recursions: Dynamic Recursive Depths for Adaptive Token-Level Computation [NIPS 2025]}
+    \textit{What if some tokens are routed recursively around parameter blocks?}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/mixture-of-recursions.png}
+        \caption{Mixture-of-Recursions (MoR) Transformer. A router decides whether each token should pass a fixed stack of layers or exit, where right-below shows the number of recursion steps in different colors \citep{baemixture}.}
+    \end{figure}
+    
+    \textbf{The Mixture-of-Recursions Strategy:}
+    \begin{itemize}
+        \item Assign token-specific recursion steps to adaptively concentrate computation on more challenging tokens.
+        \item Expert- or Token-choice routing chooses reasoning depth at each recursion step or at the outset for each token.
+        \item Unify efficiency paradigms: parameter sharing, token-level adaptive thinking depth, and memmory KV caching.
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/mixture-of-recursions-loss.png}
+        \caption{MoR consistently outperforms recursive baselines on validation loss, and matches vanilla transformers at larger scales with $\sim 1/3$ parameters \citep{baemixture}.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Think-at-Hard: Selective Latent Iterations [arXiv 2025.11]}
+    \textit{Over $85\%$ of next-tokens are correctly predicted at the first iteration. $\quad \Rightarrow$ Deeper iterations should only refine these `Hard' tokens.}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/think-at-hard.png}
+        \caption{(a) Uniform latent iteration can fix wrong predictions but also correct ones (b) Next-token prediction accuracy on fine-tuned Qwen3-1.7B \citep{fu2025think}.}
+    \end{figure}
+
+    \textbf{Think-at-Hard (TaH) Strategy:}
+    \begin{itemize}
+        \item Backbone Model Design: LoRA adapter only for iterations $d > 1$, and MLP iteration decider for routing each token.
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{images/think-at-hard-overview.png}
+            \caption{Think-at-Hard (TaH) uses LoRA at deeper iterations to shift from next-token prediction to hard-token refinement \citep{fu2025think}.}
+        \end{figure}
+        \item \textbf{Duo-causal Attention:} Extend attention to two dimensions: previous positions and shallower iteration depths.
+        \item \textbf{Oracle Iteration Policy:} A token is classified as easy if the reference (base) model correctly predicts it in one forward pass.
+        \item Prune one model layer to match the baseline parameter count.
+        \item Two-stage Training: Backbone supervision + Decider imitation under frozen backbone.
+    \end{itemize}
+
+    \vspace{0.5cm}
+    With continuation threshold $0.9$ and $\sim6\%$ tokens iterated twice, TaH delivers $4.0-5.4\%$ accuracy gains on math benchmarks.
+\end{frame}
+
+
+%------------------------------------------------
+\section{Latent Reasoning: Looping $\&$ Continuity}
+
+\begin{frame}{2. Latent Reasoning: Looping $\&$ Continuity}
+    \textit{Chain-of-Thought, but in latent space, than vocabulary space.}
+    \noindent\rule{\linewidth}{0.2mm}
+
+    \textbf{Training LLMs to Reason in a Continuous Latent Space [2024.12] [COLM 2025]}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/coconut.png}
+        \caption{Chain of Continuous Thought (Coconut) regards the last hidden state as a representation of the reasoning state and directly uses it as the next input embedding \citep{hao2024training}.}
+    \end{figure}
+    %\textbf{Coconut:} Switching LLM between `language' and `latent' mode.
+    \vspace{-0.2cm}
+    \begin{itemize}
+        \item Include special tokens \texttt{\textless bot\textgreater} and \texttt{\textless eot\textgreater} to mark the beginning and end of latent thoughts.
+        \item SFT on regular CoT data in the initial stage; Then at the $k$-th stage, replace the first $k$ reasoning steps with $k \times c$ continuous thoughts for hyperparameter $c$.
+        \item Compute normal negative log-likelihood loss on answers (mask on questions and latent thoughts).
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/coconut-search-tree.png}
+        \caption{Coconut searches the latent space with higher reasoning steps \citep{hao2024training}.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Reasoning with Latent Thoughts: \hspace{6cm} On the Power of Looped Transformers [ICLR 2025]}
+    \textit{Universally use hidden states as inputs? We have a Looped Model!}
+
+    \vspace{0.6cm}
+    \textbf{Looped Models:} Multi-layer model with weight sharing.
+    \begin{itemize}
+        \item In comparison of 24-layer 1B model (GPT-2-style) to $k$-layer model looped $24/k$ times, looped models are much better for reasoning primitives with fewer parameters.
+        \item Looped models have an inductive bias towards good reasoning despite having worse perplexity and memorization to an iso-flop non-looped model.
+        \item Accuracies for all task groups increases with more loops/depths, though also have diminishing returns.
+        \item Looping-inspired regularization can leverage this inductive bias towards better reasoning.
+    \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/looped-transformer.png}
+        \caption{Comparison of a 12-layer baseline model and a looped model \citep{saunshireasoning}.}
+    \end{figure}
+
+    \textit{Looped Model plays scaling in reasoning: Compute more, Answer more.}
+\end{frame}
+
+
+\begin{frame}{Scaling up Test-Time Compute with Latent Reasoning: \hspace{1cm} A Recurrent Depth Approach [NIPS 2025]}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/recurrent-depth.png}
+        \caption{The recurrent depth architecture, where each block consists of a number of sub-layers \citep{geiping2025scaling}. For the same log probability, looped models tend to perform better on reasoning-intensive tasks.}
+    \end{figure}
+
+    \textbf{Recurrent Unrolling:}
+    \begin{itemize}
+        \item Layers are organized as recurrent blocks which accept a latent vector (initialized with a random state) as input.
+        . %; Every iteration increases token correlation, mix-up representation collapse.
+        \item Inject the data in every recurrence step with the latent vector to increase token correlation and stability.
+        \item Randomly sample iteration counts during training, and backpropagate only the last k iterations of the recurrent blocks.
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/recurrent-depth-3.5B.png}
+        \caption{A 3.5B recurrent depth model can iteratre longer to use more compute and improve its performance in latent space at test time \citep{geiping2025scaling}.}
+    \end{figure}
+    \vspace{-0.4cm}
+    \begin{itemize}
+        \item \textbf{Pro:} Do not require specialized CoT data.
+        \item \textbf{Con:} Pretraining is required (800B Tokens).
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Hybrid Latent Reasoning via Reinforcement Learning \hspace{1cm} [NIPS 2025 Spotlight]} 
+    \textit{Let's unify latents and tokens, and always try RL in reasoning tasks!}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/hybrid-latent-reasoning.png}
+        \caption{Hybrid latent reasoning with gating (left) and hybrid reasoning policy optimization (right) \citep{yue2025hybrid}.}
+    \end{figure}
+
+    \textbf{Gated Hybrid Reasoning:}
+    \begin{itemize}
+        \item Project final hidden states back into the embedding space.
+        \item Use normalized and weighted output probabilities as latent features.
+        \item Gated sigmoid function to control the interpolated embeddings' blending, to balance between semantic continuity and noise level. 
+        \item The final answer is still generated via standard decoding.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{Hybrid Reasoning Policy Optimization (HRPO):}
+    \begin{itemize}
+        \item Use hybrid rollouts per input query and compute advantages by standardizing rewards within the group.
+        \item Hybrid trajectories with higher rewards have higher advantages.
+        \item During training, the hidden ratio of latents increases steadily, and completion lengths decreases.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{Pros and Cons:} Outperforming prior latent reasoning and distilled CoT methods in both knowledge- and reasoning- tasks, but introduces additional computation overhead.
+\end{frame}
+
+
+%------------------------------------------------
+\section{Diffusion Language Models: Implicit Recursion}
+
+\begin{frame}{3. Diffusion Language Models: Implicit Recursion} 
+    \textit{Does the Recurrent Unrolling method remind you of diffusion model?}
+    \begin{itemize}
+        \item Auto-regressive modeling or the next-token prediction paradigm are not implicitly / perfectly designed for nonlinear reasoning or learning bi-directional causal relationships.
+        \item Diffusion transformers have achieved success on complex visual tasks already with bi-directional dependencies.
+    \end{itemize}
+    \textit{So we introduce next ...}
+    
+    \noindent\rule{\linewidth}{0.2mm}
+    \vspace{0.2cm}
+    
+    \textbf{LLaDA: Large Language Diffusion Models [NIPS 2025 Oral]}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/llada.png}
+        \caption{Overview of the (a) Pretraining, (b) SFT, and (c) Sampling paradigm of LLaDA, a transformer-based mask predictor that predicts all masked tokens simultaneously \citep{nie2025large}.}
+    \end{figure}
+    \begin{itemize}
+        \item Pretraining: Mask each token independently with the same probability $t \in [0, 1]$ and sample them with a forward process; Compute cross-entropy loss only on the masked tokens.
+        \item Supervised Fine-Tuning: Leave the prompt unchanged and only mask the tokens in the response; Perform sampling-training.
+        \item Inference/Sampling: At each step from time $t \in (0, 1]$ to $s \in [0, t)$, predict all masked tokens and remask $\frac{s}{t}$ tokens with lowest confidence tokens; Timesteps are uniformly distributed.
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \textit{Another impactful Diffusion Large Language Model is Dream \cite{ye2025dream}!}
+\end{frame}
+
+
+\begin{frame}{LLaDOU: Reinforcing the Diffusion Chain of Lateral Thought with DLMs [NIPS 2025]}
+    \textit{Given LLaDA’s flexible token prediction paradigm, how can the response generation strategy be further strengthened, or perform implicit CoT?}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{images/lladou.png}
+        \caption{DCoLT (Diffusion Chain of Lateral Thought) generates tokens at chosen positions non-linearly, not following the auto-regressive order \citep{huang2025reinforcing}.}
+    \end{figure}
+
+    \textbf{LLaDOU} (Ordered Unmasking) / \textbf{DCoLT} Training:
+    \begin{itemize}
+        \item Define unmasking policy that selects top-K tokens at each step.
+        \item Train unmasking $+$ token prediction policy to optimize final reward.
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/lladou-architecture.png}
+        \caption{The LLaDOU architecture, which first predicts the token set to unmask, then samples those tokens by LLaDA \citep{huang2025reinforcing}.}
+    \end{figure}
+    \textit{A recent study \citep{jazbec2025learningunmaskingpoliciesdiffusion} by Apple introduced another intriguing approach!}
+\end{frame}
+
+
+\begin{frame}{Remasking Discrete Diffusion Models with Inference-Time Scaling [NIPS 2025]} 
+    \textit{For modern MDMs, when a token is generated, it cannot be updated again, even when it introduces an error. $\Rightarrow$ Why not remask it?}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/remasking-inference-time.png}
+        \caption{Remasking Diffusion Model (ReMDM) Sampler allow for more flexible generation of already decoded tokens \citep{wang2025remasking}.}
+    \end{figure}
+    
+    Define a discrete diffusion model with posterior constructed as:
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/remasking-inference-time-posterior-2.png}
+    \end{figure}
+    \begin{itemize}
+        \item Parameter $\sigma_t$ controls the remasking flexibility; Increasing $\sigma_t$ moves away from $z_t$, while $\sigma_t = 0$ recovers the MDLM posterior.
+        \item \textbf{Confidence-based Schedule:} Define confidence score for unmasked tokens w.r.t. decoding probability at its last unmasking.
+        \item Masked tokens are decoded using the approximate posterior from MDLM, and the unmasked tokens are remasked negatively proportional to their confidence.
+        \item \textbf{Turning on/off ReMDM:} Use a Switch or a three-stage Loop from vanilla sampling, mixture, to pure posterior prediction.
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \textit{ReMDM propose a training-free and alternative forward-backward processes that Facilitates diffusion guidance while enabling flexibility. }
+\end{frame}
+
+
+\begin{frame}{Soft-Masked Diffusion Language Models [arXiv 2025.10]}
+    \textit{What's left, after unmasking and remasking strategies? Lets blend!}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/soft-masked-dlm.png}
+        \caption{Soft-masking enriches the feedback for the next decoding step by superposing prior prediction information \citep{hersche2025soft}.}
+    \end{figure}
+
+    \textbf{Soft-Masking (SM)}:
+    \begin{itemize}
+        \item Blend the mask token embedding with the top-k predicted token embeddings from the previous step (convex combination).
+        \item Confidence-based token weighting by negative probability entropy and scaled sigmoid.
+        \item Two-pass Training Scheme: 
+        \begin{enumerate}
+            \item Approximate the probability distribution of the previous denoising step by passing the corrupted data.
+            \item Compute the soft-mask representation and passed through the backbone a second time to compute the loss.
+        \end{enumerate}
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/soft-masked-dlm-architecture.png}
+        \caption{The soft-masking architecture predict via iterative denoising of an initially fully masked response \citep{hersche2025soft}. Does it remind you latent reasoning?}
+    \end{figure}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Conclusion \& References}
+
+\begin{frame}{Summary: Insights! (are they correct?)}
+\large 
+
+\begin{enumerate}
+    \setlength{\itemsep}{0.5cm}
+    \item Adaptive (valid) computing strategy can always improve efficiency and performance: 
+    \begin{itemize}
+        \large
+        \item Model Level: Compute more on important layers.
+        \item Token Level: Compute less on confident predictions.
+        \item Data Level: Compute less on easy inputs.
+    \end{itemize}
+    \item Conditional Generation $\geq$ Uncon (in Reasoning)?
+    \item The Reasoning Scaling Law: 
+    \begin{itemize}
+        \large
+        \item Knowledge by Model: Parameters $\Rightarrow$ Intelligence.
+        \item Depth by Prediction: Think-about-Think.
+        \item Width by Sampling: Let's ensemble! \citep{chen2025parallel}
+    \end{itemize}
+\end{enumerate}
+
+\vspace{1cm}
+\textit{What scaling law governs latent reasoning?}
+\begin{itemize}
+    \item Both vertical (iterative computation) and parallel scaling (more latent directions)!
+\end{itemize}
+    
+\vspace{1cm}
+\noindent\rule{\linewidth}{0.2mm}
+\vspace{1cm}
+
+\textbf{\Large Thank you for your attention!}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{References}
+    \small % \large
+    \bibliographystyle{unsrt}
+    \bibliography{refs}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

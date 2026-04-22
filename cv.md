@@ -80,7 +80,31 @@ title: CV
 <section class="cv-block" markdown="1">
 ## Projects
 <hr class="section-divider" />
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>The Mano Optimizer</strong></div>
+        <div class="cv-entry-date">Jan 2026 – Present</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li></li>
+    </ul>
+</div>
 
-- **The Mano Optimizer (On-going):**
-- **2024 CCF-Baidu Open-Fund Project:**
+<div class="cv-entry">
+    <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>2024 CCF-Baidu Open-Fund Project: Principal Spectral Regularization</strong></div>
+        <div class="cv-entry-date">Oct 2024 – Oct 2025</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li></li>
+    </ul>
+</div>
+</section>
+
+<section class="cv-block" markdown="1">
+## Personal CV
+<hr class="section-divider" />
+
+- <a href="{{ '/cv/english/' | relative_url }}">Yufei_Gu_CV_English</a>
+- <a href="{{ '/cv/chinese/' | relative_url }}">顾宇飞_简历_中文</a>
 </section>

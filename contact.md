@@ -25,5 +25,5 @@ title: Contact
 
 - **GitHub:** [Yufei-Gu-451](https://github.com/Yufei-Gu-451)
 - **Google Scholar:** [Yufei Gu](https://scholar.google.co.uk/citations?user=YIhJgKsAAAAJ&hl=en)
-- **RedNote:** [RedNote](https://xhslink.com/m/AegSDsj9BHm)
+- **RedNote/小红书:** [篁谷凤](https://xhslink.com/m/AegSDsj9BHm)
 </section>
