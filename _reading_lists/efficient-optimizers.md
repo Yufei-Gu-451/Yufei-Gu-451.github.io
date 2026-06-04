@@ -55,6 +55,7 @@ date: 2026-06-04
     - *When Does Second-Order Optimization Speed Up Training?* [\<ICLR 2024 Tiny\>](https://iclr.cc/virtual/2024/20933)
     - *SOAP: Improving and Stabilizing Shampoo using Adam.* [\<NIPS 2024 Workshop\>](https://nips.cc/virtual/2024/100406) [\<arXiv\>](https://arxiv.org/abs/2409.11321)
         - *Improving SOAP using Iterative Whitening and Muon.* [\<GitHub 2025\>](https://nikhilvyas.github.io/SOAP_Muon.pdf)
+    - *Conda: Column-Normalized Adam for Training Large Language Models Faster.* [\<arXiv 2025.9\>](https://arxiv.org/abs/2509.24218)
 2. *Muon: An Optimizer for the Hidden Layers of Neural Networks.* [\<GitHub 2024\>](https://github.com/KellerJordan/Muon) [\<Blog\>](https://kellerjordan.github.io/posts/muon/)
     - *Muon is Scalable for LLM Training.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.16982)
     - *Practical Efficiency of Muon for Pretraining.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.02222v1)
@@ -70,7 +71,6 @@ date: 2026-06-04
         - *Preconditioning Benefits of Spectral Orthogonalization in Muon.* [\<arXiv 2026.1\>](https://arxiv.org/pdf/2601.13474)
         - *Spectral Flattening Is All Muon Needs: How Orthogonalization Controls Learning Rate and Convergence.* [\<arXiv 2026.5\>](https://arxiv.org/pdf/2605.13079)
         - *Muon is Not That Special: Random or Inverted Spectra Work Just as Well.* [\<arXiv 2026.5\>](https://arxiv.org/abs/2605.11181)
-3. *Conda: Column-Normalized Adam for Training Large Language Models Faster.* [\<arXiv 2025.9\>](https://arxiv.org/abs/2509.24218)
 
 ## Optimizer Wrappers / Decorators
 

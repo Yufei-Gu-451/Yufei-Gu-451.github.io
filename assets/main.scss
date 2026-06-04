@@ -49,13 +49,11 @@ body::after {
   backdrop-filter: blur(10px);
 }
 
-.site-title,
 .page-link,
 a {
   color: var(--color-primary-deep);
 }
 
-.site-title,
 .site-footer,
 .footer-heading,
 .footer-col,
@@ -64,12 +62,10 @@ a {
   font-family: "Yu Gothic UI";
 }
 
-.site-title,
 .footer-heading {
   letter-spacing: -0.01em;
 }
 
-.site-title:hover,
 .page-link:hover,
 a:hover {
   color: var(--color-secondary);
