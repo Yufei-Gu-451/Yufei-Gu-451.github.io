@@ -9,7 +9,6 @@ header_pages:
   - publications.md
   - blogs.md
   - cv.md
-  - contact.md
 
 # Build settings
 markdown: kramdown
@@ -23,7 +22,21 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - _reading_lists/_TEMPLATE.md
 
 # Include files
 include:
   - _pages
+
+# Collections
+collections:
+  reading_lists:
+    output: true
+    permalink: /reading-lists/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: reading_lists
+    values:
+      layout: reading-list

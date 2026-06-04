@@ -533,6 +533,25 @@ h3 {
   gap: 22px;
 }
 
+.reading-list-block ol {
+  gap: 14px;
+}
+
+.reading-list-block li > ul {
+  list-style: disc;
+  margin: 10px 0 4px;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 10px;
+}
+
+.reading-list-block li > ul ul {
+  list-style: circle;
+  margin: 8px 0 2px;
+  padding-left: 1.3rem;
+  gap: 8px;
+}
+
 .blog-timeline {
   position: relative;
   display: grid;

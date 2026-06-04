@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="page-intro">
+  <p class="eyebrow">
+    Reading List
+    {% if page.status %} &middot; {{ page.status | capitalize }}{% endif %}
+    {% if page.date %} &middot; {{ page.date | date: "%Y.%m" }}{% endif %}
+  </p>
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+  {% if page.source %}<p><a href="{{ page.source }}" target="_blank" rel="noopener">Original source &rarr;</a></p>{% endif %}
+  <hr class="section-divider" />
+</div>
+
+{%- assign sections = content | split: '<h2' -%}
+{%- for section in sections -%}
+  {%- if forloop.first -%}
+    {%- assign preamble = section | strip -%}
+    {%- if preamble != '' -%}
+<section class="publication-block reading-list-block">
+{{ section }}
+</section>
+    {%- endif -%}
+  {%- else -%}
+<section class="publication-block reading-list-block">
+<h2{{ section }}
+</section>
+  {%- endif -%}
+{%- endfor -%}
+
+<p class="reading-list-back"><a href="{{ '/reading-lists/' | relative_url }}">&larr; Back to all reading lists</a></p>

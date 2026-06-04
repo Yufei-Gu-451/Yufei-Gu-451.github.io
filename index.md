@@ -15,8 +15,8 @@ title: Home
       <div class="hero-actions">
         <a class="button-primary" href="./publications">Publications</a>
         <a class="button-accent" href="./notes">Notes</a>
-        <a class="button-soft" href="./cv">Curriculum Vitae</a>
-        <a class="button-accent" href="./contact">Contact</a>
+        <a class="button-soft" href="./reading-lists">Reading Lists</a>
+        <a class="button-accent" href="./cv">CV & Contact</a>
       </div>
     </div>
 
@@ -36,10 +36,11 @@ title: Home
         <h2>Recent Updates</h2>
         <hr class="hero-divider" />
         <ul class="news-list">
+          <li><strong>2026-05</strong><span>Starting Research Internship at Hunyuan Pretraining, Rhinoceros Bird Elite Talent Program.</span></li>
           <li><strong>2026-03</strong><span>Release of Mano_v2 at <a href="https://github.com/xie-lab-ml/Mano-Restriking-Manifold-Optimization-for-LLM-Training">GitHub:Mano-Restriking-Manifold-Optimization-for-LLM-Training</a>!</span></li>
           <li><strong>2026-02</strong><span>Release of the Mano optimizer and manuscript preprint at <a href="https://arxiv.org/abs/2601.23000">arXiv:2601.23000</a>!</span></li>
-          <li><strong>2026-01</strong><span>Two accepted papers at [ICLR'26] and [CVPR'26]!</span></li>
-          <li><strong>2025-09</strong><span>Starting PhD at HKUST-GZ, XLeaf Lab!</span></li>
+          <li><strong>2026-01</strong><span>Two accepted papers at [ICLR'26] and [CVPR'26].</span></li>
+          <li><strong>2025-09</strong><span>Starting PhD at HKUST-GZ, XLeaf Lab.</span></li>
         </ul>
       </section>
     </div>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CV
+title: CV & Contact
 ---
 
 <section class="cv-block" markdown="1">
@@ -48,6 +48,16 @@ title: CV
 
 <div class="cv-entry">
     <div class="cv-entry-head">
+        <div class="cv-entry-title"><strong>Research Internship (full-time)</strong>, Tencent Hunyuan</div>
+        <div class="cv-entry-date">May 2026 – May 2027</div>
+    </div>
+    <ul class="cv-entry-details">
+        <li>Developing next-generation optimizers for efficient and advanced LLM Pretraining.</li>
+    </ul>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-entry-head">
         <div class="cv-entry-title"><strong>Research Assistant (full-time)</strong>, HKUST(GZ)</div>
         <div class="cv-entry-date">Sept 2024 – Aug 2025</div>
     </div>
@@ -78,33 +88,27 @@ title: CV
 </section>
 
 <section class="cv-block" markdown="1">
-## Projects
-<hr class="section-divider" />
-<div class="cv-entry">
-    <div class="cv-entry-head">
-        <div class="cv-entry-title"><strong>The Mano Optimizer</strong></div>
-        <div class="cv-entry-date">Jan 2026 – Present</div>
-    </div>
-    <ul class="cv-entry-details">
-        <li></li>
-    </ul>
-</div>
-
-<div class="cv-entry">
-    <div class="cv-entry-head">
-        <div class="cv-entry-title"><strong>2024 CCF-Baidu Open-Fund Project: Principal Spectral Regularization</strong></div>
-        <div class="cv-entry-date">Oct 2024 – Oct 2025</div>
-    </div>
-    <ul class="cv-entry-details">
-        <li></li>
-    </ul>
-</div>
-</section>
-
-<section class="cv-block" markdown="1">
 ## Personal CV
 <hr class="section-divider" />
 
 - <a href="{{ '/cv/english/' | relative_url }}">Yufei_Gu_CV_English</a>
 - <a href="{{ '/cv/chinese/' | relative_url }}">顾宇飞_简历_中文</a>
+</section>
+
+<section class="cv-block" markdown="1">
+## Contact
+<hr class="section-divider" />
+
+- **Email (Official):** [ygu167@connect.hkust-gz.edu.cn](mailto:ygu167@connect.hkust-gz.edu.cn)
+- **Email (Personal):** [yufei.gu.451@outlook.com](mailto:yufei.gu.451@outlook.com)
+- **Phone (China):** +86 13122366091
+</section>
+
+<section class="cv-block" markdown="1">
+## Social Media
+<hr class="section-divider" />
+
+- **GitHub:** [Yufei-Gu-451](https://github.com/Yufei-Gu-451)
+- **Google Scholar:** [Yufei Gu](https://scholar.google.co.uk/citations?user=YIhJgKsAAAAJ&hl=en)
+- **RedNote/小红书:** [篁谷凤](https://xhslink.com/m/AegSDsj9BHm)
 </section>
