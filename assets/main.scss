@@ -103,12 +103,18 @@ a:hover {
   box-sizing: border-box;
 }
 
-.hero-copy h1,
+.hero-copy h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
 .page-intro h1 {
   margin: 0 0 12px;
-  font-size: clamp(2.5rem, 4vw, 4.25rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-size: 1.95rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .chinese-name {
