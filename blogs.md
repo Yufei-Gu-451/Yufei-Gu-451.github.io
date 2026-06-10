@@ -21,7 +21,7 @@ permalink: /notes/
 		<div class="blog-timeline-date">2026.03</div>
 		<div class="blog-timeline-card">
 			<h3><a href="{{ '/notes/mano-restriking-manifold-optimization/' | relative_url }}">Mano: Restriking Manifold Optimization for LLM Training</a></h3>
-			<p>Introduction to the Mano optimizer we proposed including the theoretical analytics and empirical results.</p>
+			<p>Introduction to the Mano optimizer, which we proposed, including the theoretical analytics and empirical results.</p>
 		</div>
 	</article>
 

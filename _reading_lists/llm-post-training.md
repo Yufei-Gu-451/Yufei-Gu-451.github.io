@@ -122,39 +122,39 @@ date: 2026-05-31
 ## Attention Sinks & Massive Values
 
 1. *Massive Values in Self-Attention Modules are the Key to Contextual Knowledge Understanding.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.01563)
-2. *What Drives Attention Sinks? A Study of Massive Activations and Rotational Positional Encoding in Large Vision–Language Models.* [\<IPM 2026\>](https://www.sciencedirect.com/science/article/pii/S0306457325003723)
+2. *What Drives Attention Sinks? A Study of Massive Activations and Rotational Positional Encoding in Large Vision-Language Models.* [\<IPM 2026\>](https://www.sciencedirect.com/science/article/pii/S0306457325003723)
 3. *Context Tokens are Anchors: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective.* [\<ICLR 2026\>](https://openreview.net/forum?id=mOz9jVYxsD)
 4. *Deconstructing Positional Information: From Attention Logits to Training Biases.* [\<ICLR 2026\>](https://openreview.net/forum?id=D0u0glT060)
 5. *Massive Activations are the Key to Local Detail Synthesis in Diffusion Transformers.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.11538)
 6. *The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks.* [\<arXiv 2026.3, Yann LeCun\>](https://arxiv.org/abs/2603.05498)
 7. *Attention Sinks Are Provably Necessary in Softmax Transformers: Evidence from Trigger-Conditional Tasks.* [\<arXiv 2026.3\>](https://arxiv.org/abs/2603.11487)
 
-## Latent Reasoning in Auto-Regressive Models
+## Latent Reasoning for AR/Diffusion-LLMs
 
-1. *COCONUT: Training Large Language Models to Reason in a Continuous Latent Space.* [\<arXiv 2024.12\>](https://arxiv.org/abs/2412.06769) [\<ICLR 2025 Reject\>](https://openreview.net/forum?id=tG4SgayTtk)
-2. *Deliberation in Latent Space via Differentiable Cache Augmentation.* [\<arXiv 2024.12\>](https://arxiv.org/abs/2412.17747)
-3. *SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.12134)
-4. *CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.21074)
-5. *Reasoning with Latent Thoughts: On the Power of Looped Transformers.* [\<ICLR 2025\>](https://openreview.net/forum?id=din0lGfZFd)
-6. *Reasoning to Learn from Latent Thoughts.* [\<arXiv 2025.3\>](https://arxiv.org/abs/2503.18866)
-7. *Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.05171) [\<NIPS 2025\>](https://openreview.net/forum?id=S3GhJooWIC)
-8. *Think Silently, Think Fast: Dynamic Latent Compression of LLM Reasoning Chains.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.16552)
-9. *Enhancing Latent Computation in Transformers with Latent Tokens.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.12629)
-10. *Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.13308)
-11. *Continuous Chain of Thought Enables Parallel Exploration and Reasoning.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.23648v1)
-12. *Latent Reasoning in LLMs as a Vocabulary-Space Superposition.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.15522)
-13. *LaDiR: Latent Diffusion Enhances LLMs for Text Reasoning.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.04573)
-14. *CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning.* [\<arXiv 2025.11\>](https://arxiv.org/abs/2511.18659)
-15. *Hybrid Latent Reasoning via Reinforcement Learning.* [\<NIPS 2025 Spotlight\>](https://openreview.net/forum?id=LjtgTpWH71)
-16. **Related:**
-    - *LLMs Do Not Think Step-by-step In Implicit Reasoning.* [\<arXiv 2024.11\>](https://arxiv.org/abs/2411.15862)
-    - *Reasoning Models Don't Always Say What They Think.* [\<arXiv 2025.4\>](https://assets.anthropic.com/m/71876fabef0f0ed4/original/reasoning_models_paper.pdf)
-    - *Reasoning Models Can Be Effective Without Thinking.* [\<arXiv 2025.4\>](https://arxiv.org/abs/2504.09858)
+1. **Auto-Regressive LLMs:**
+    1. *COCONUT: Training Large Language Models to Reason in a Continuous Latent Space.* [\<arXiv 2024.12\>](https://arxiv.org/abs/2412.06769) [\<ICLR 2025 Reject\>](https://openreview.net/forum?id=tG4SgayTtk)
+    2. *Deliberation in Latent Space via Differentiable Cache Augmentation.* [\<arXiv 2024.12\>](https://arxiv.org/abs/2412.17747)
+    3. *SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.12134)
+    4. *CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.21074)
+    5. *Reasoning with Latent Thoughts: On the Power of Looped Transformers.* [\<ICLR 2025\>](https://openreview.net/forum?id=din0lGfZFd)
+    6. *Reasoning to Learn from Latent Thoughts.* [\<arXiv 2025.3\>](https://arxiv.org/abs/2503.18866)
+    7. *Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach.* [\<arXiv 2025.2\>](https://arxiv.org/abs/2502.05171) [\<NIPS 2025\>](https://openreview.net/forum?id=S3GhJooWIC)
+    8. *Think Silently, Think Fast: Dynamic Latent Compression of LLM Reasoning Chains.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.16552)
+    9. *Enhancing Latent Computation in Transformers with Latent Tokens.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.12629)
+    10. *Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.13308)
+    11. *Continuous Chain of Thought Enables Parallel Exploration and Reasoning.* [\<arXiv 2025.5\>](https://arxiv.org/abs/2505.23648v1)
+    12. *Latent Reasoning in LLMs as a Vocabulary-Space Superposition.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.15522)
+    13. *LaDiR: Latent Diffusion Enhances LLMs for Text Reasoning.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.04573)
+    14. *CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning.* [\<arXiv 2025.11\>](https://arxiv.org/abs/2511.18659)
+    15. *Hybrid Latent Reasoning via Reinforcement Learning.* [\<NIPS 2025 Spotlight\>](https://openreview.net/forum?id=LjtgTpWH71)
+2. **Diffusion LLMs:**
+    1. *Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.03206)
+    2. *Soft-Masked Diffusion Language Models.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.17206)
+3. **Related:**
+    1. *LLMs Do Not Think Step-by-step In Implicit Reasoning.* [\<arXiv 2024.11\>](https://arxiv.org/abs/2411.15862)
+    2. *Reasoning Models Don't Always Say What They Think.* [\<arXiv 2025.4\>](https://assets.anthropic.com/m/71876fabef0f0ed4/original/reasoning_models_paper.pdf)
+    3. *Reasoning Models Can Be Effective Without Thinking.* [\<arXiv 2025.4\>](https://arxiv.org/abs/2504.09858)
 
-## Latent Reasoning in Diffusion Language Models
-
-1. *Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.03206)
-2. *Soft-Masked Diffusion Language Models.* [\<arXiv 2025.10\>](https://arxiv.org/abs/2510.17206)
 
 ## Token-Level Iterative Refinement (AR/Diffusion)
 
