@@ -396,7 +396,19 @@ h3 {
 }
 
 .accent-panel {
-  background: linear-gradient(180deg, rgba(243, 112, 33, 0.08) 0%, rgba(255, 255, 255, 0.96) 100%);
+  background: linear-gradient(180deg, rgba(255, 248, 242, 0.9) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+
+.accent-panel h2 {
+  color: #35555b;
+}
+
+.accent-panel .news-list li span {
+  color: var(--color-muted);
+}
+
+.accent-panel .news-list a {
+  color: #0f8a96;
 }
 
 .interest-list {
