@@ -10,6 +10,14 @@ permalink: /notes/
 
 <div class="blog-timeline">
 	<article class="blog-timeline-item">
+		<div class="blog-timeline-date">2026.06</div>
+		<div class="blog-timeline-card">
+			<h3><a href="{{ '/notes/optimizer-framework/' | relative_url }}">Two Theoretical Spectra of Modern Optimizers: Fisher-Approximated and Norm-Constrained</a></h3>
+			<p>A note revisiting two theoretical lenses for modern optimizer design, connecting Fisher-approximated methods, norm-constrained updates, and recent optimizer trends.</p>
+		</div>
+	</article>
+
+	<article class="blog-timeline-item">
 		<div class="blog-timeline-date">2026.03</div>
 		<div class="blog-timeline-card">
 			<h3><a href="{{ '/notes/mano-restriking-manifold-optimization/' | relative_url }}">Mano: Restriking Manifold Optimization for LLM Training</a></h3>
